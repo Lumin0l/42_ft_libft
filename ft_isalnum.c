@@ -6,16 +6,16 @@
 /*   By: ide-la-i <ide-la-i@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 12:43:17 by ide-la-i          #+#    #+#             */
-/*   Updated: 2022/12/02 15:01:39 by ide-la-i         ###   ########.fr       */
+/*   Updated: 2022/12/05 12:45:14 by ide-la-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum (int c)
+int	ft_isalnum(int c)
 {
 	if ((ft_isalpha (c) == 1) || (ft_isdigit (c) == 1))
-		return 1;
+		return (1);
 	else
-		return 0;
+		return (0);
 }

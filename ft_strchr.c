@@ -1,35 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Wft_strlcat.c                                      :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ide-la-i <ide-la-i@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/02 10:49:51 by ide-la-i          #+#    #+#             */
-/*   Updated: 2022/12/05 14:04:30 by ide-la-i         ###   ########.fr       */
+/*   Created: 2022/12/02 16:43:15 by ide-la-i          #+#    #+#             */
+/*   Updated: 2022/12/05 13:29:37 by ide-la-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+char	*ft_strchr(const char *s, int c)
 {
-	unsigned int	dst_end;
 	unsigned int	index;
+	unsigned int	len;
+	char			*str_return;
 
-	dst_end = 0;
-	while (dst[dst_end] != '\0')
-		dst_end++;
+	str_return = (char *)s;
+	len = (ft_strlen(s));
 	index = 0;
-	if (dstsize > 0)
+	while (index <= len)
 	{
-		while (index < (dstsize - 1))
-		{
-			dst[dst_end] = src[index];
-			dst_end++;
-			index++;
-		}
+		if (str_return[index] == (char)c)
+			return (&str_return[index]);
+		index++;
 	}
-	dst[dst_end] = '\0';
-	return (ft_strlen(dst));
+	return (NULL);
 }
+
+/* Version 2 
+char *ft_strchr(const char *s, int c)
+{
+	char *str_return;
+
+	str_return = (char *)s;
+	while (*str_return)
+	{
+		if (*str_return == (char)c)
+			return (str_return);
+		str_return++;
+	}
+	return (NULL);
+}
+*/

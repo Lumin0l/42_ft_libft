@@ -6,16 +6,16 @@
 /*   By: ide-la-i <ide-la-i@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:00:02 by ide-la-i          #+#    #+#             */
-/*   Updated: 2022/12/02 14:57:11 by ide-la-i         ###   ########.fr       */
+/*   Updated: 2022/12/05 12:48:40 by ide-la-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint (int c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
-		return 1;
+		return (1);
 	else
-		return 0;
+		return (0);
 }

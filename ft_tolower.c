@@ -6,13 +6,13 @@
 /*   By: ide-la-i <ide-la-i@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 16:40:46 by ide-la-i          #+#    #+#             */
-/*   Updated: 2022/12/02 16:41:06 by ide-la-i         ###   ########.fr       */
+/*   Updated: 2022/12/05 13:32:16 by ide-la-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int ch)
+int	ft_tolower(int ch)
 {
 	if (((unsigned char)ch >= 'A') && ((unsigned char)ch <= 'Z'))
 		return (ch + 32);

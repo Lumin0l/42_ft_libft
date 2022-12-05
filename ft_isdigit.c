@@ -6,16 +6,16 @@
 /*   By: ide-la-i <ide-la-i@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 15:24:00 by ide-la-i          #+#    #+#             */
-/*   Updated: 2022/12/02 14:57:04 by ide-la-i         ###   ########.fr       */
+/*   Updated: 2022/12/05 12:48:07 by ide-la-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit (unsigned char c)
+int	ft_isdigit(unsigned char c)
 {
 	if (c >= '0' && c <= '9')
-		return 1;
+		return (1);
 	else
-		return 0;
+		return (0);
 }
