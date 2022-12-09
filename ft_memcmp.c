@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ide-la-i <ide-la-i@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/01 17:19:49 by marvin            #+#    #+#             */
-/*   Updated: 2022/12/01 17:19:49 by marvin           ###   ########.fr       */
+/*   Created: 2022/12/07 17:34:06 by marvin            #+#    #+#             */
+/*   Updated: 2022/12/07 17:34:06 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcpy(char *dst, const char *src, size_t size)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned int index;
+	size_t			index;
+	unsigned char	*p_s1;
+	unsigned char	*p_s2;
 
+	p_s1 = (unsigned char *)s1;
+	p_s2 = (unsigned char *)s2;
 	index = 0;
-	if (size > 0)
+	while (index < n)
 	{
-		while (index < size - 1)
-		{
-			dst[index] = src[index];
+		if (p_s1[index] != p_s2[index])
+			return (p_s1[index] - p_s2[index]);
+		else
 			index++;
-		}
-		dst[index] = '\0';
 	}
-
-	index = 0;
-	while (src[index] != '\0')
-		index++;
-	return (index);
+	return (0);
 }

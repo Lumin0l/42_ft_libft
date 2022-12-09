@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ide-la-i <ide-la-i@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/02 16:43:15 by ide-la-i          #+#    #+#             */
-/*   Updated: 2022/12/02 16:57:03 by ide-la-i         ###   ########.fr       */
+/*   Created: 2022/12/02 10:49:51 by ide-la-i          #+#    #+#             */
+/*   Updated: 2022/12/09 12:59:37 by ide-la-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	unsigned int index;
+	size_t	i;
+	size_t	len;
 
-	index = 0;
-	while (s[index] != '\0')
-	{
-		if (s[index] == (const char)c)
-			return ((char *)s);
-		index++;
-	}
-	return ((char *)s);
+	i = 0;
+	while (dst[i] && i < dstsize)
+		i++;
+	len = ft_strlcpy(dst + i, src, dstsize - i);
+	return (i + len);
 }

@@ -14,43 +14,11 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char	*p_src;
-	unsigned char	*p_dst;
-	unsigned char	temp[n];
-	size_t			index;
+	char	*temp;
 
-	p_src = (unsigned char *) src;
-	p_dst = (unsigned char *) dest;
-	index = 0;
-	while (index < n)
-	{
-		temp[index] = p_src[index];
-		index++;
-	}
-	index = 0;
-	while (index < n)
-	{
-		p_dst[index] = p_src[index];
-		index++;
-	}
+	temp = malloc(n);
+	ft_memcpy(temp, src, n);
+	ft_memcpy(dest, temp, n);
+	free (temp);
 	return (dest);
 }
-
-/*
-void	*ft_memmove(void *dest, const void *src, size_t n)
-{
-	unsigned char	*p_dest;
-	unsigned char	*temp;
-	size_t			index;
-
-	temp = (unsigned char *) src;
-	p_dest = (unsigned char *) dest;
-	index = 0;
-	while (index < n)
-	{
-		p_dest[index] = temp[index];
-		index++;
-	}
-	return (dest);
-}
-*/
