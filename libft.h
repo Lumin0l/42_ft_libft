@@ -6,7 +6,7 @@
 /*   By: ide-la-i <ide-la-i@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 12:35:42 by ide-la-i          #+#    #+#             */
-/*   Updated: 2022/12/09 14:49:02 by ide-la-i         ###   ########.fr       */
+/*   Updated: 2022/12/12 12:37:42 by ide-la-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 /* # include <stdio.h> */
 
 int		ft_isalpha(int c);
-int		ft_isdigit(unsigned char c);
+int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
@@ -40,5 +40,6 @@ char	*ft_strdup(const char *s);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char	*big, const char *little, size_t len);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
