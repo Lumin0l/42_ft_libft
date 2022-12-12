@@ -6,7 +6,7 @@
 /*   By: ide-la-i <ide-la-i@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 12:35:42 by ide-la-i          #+#    #+#             */
-/*   Updated: 2022/12/12 12:37:42 by ide-la-i         ###   ########.fr       */
+/*   Updated: 2022/12/12 18:18:14 by ide-la-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,9 @@ void	*ft_memchr(const void *s, int c, size_t n);
 char	*ft_strdup(const char *s);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
-char	*ft_strnstr(const char	*big, const char *little, size_t len);
+char	*ft_strnstr(const char	*haystack, const char *needle, size_t len);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
 
 #endif
