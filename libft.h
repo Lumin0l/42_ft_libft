@@ -6,7 +6,7 @@
 /*   By: ide-la-i <ide-la-i@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 12:35:42 by ide-la-i          #+#    #+#             */
-/*   Updated: 2022/12/16 13:04:26 by ide-la-i         ###   ########.fr       */
+/*   Updated: 2022/12/20 15:08:17 by ide-la-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 //# include <string.h>
 # include <stdlib.h>
+# include <unistd.h>
 /* # include <stdio.h> */
 
 int		ft_isalpha(int c);
@@ -44,5 +45,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+void	ft_putchar_fd(char c, int fd);
 
 #endif
