@@ -6,7 +6,7 @@
 /*   By: ide-la-i <ide-la-i@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 12:35:42 by ide-la-i          #+#    #+#             */
-/*   Updated: 2022/12/20 15:08:17 by ide-la-i         ###   ########.fr       */
+/*   Updated: 2022/12/20 15:36:53 by ide-la-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,6 @@ char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
 
 #endif
