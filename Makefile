@@ -6,7 +6,7 @@
 #    By: ide-la-i <ide-la-i@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/02 12:56:59 by ide-la-i          #+#    #+#              #
-#    Updated: 2022/12/05 12:41:38 by ide-la-i         ###   ########.fr        #
+#    Updated: 2023/05/09 17:09:24 by ide-la-i         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,19 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-SOURCE = $(shell find . -name "*.c")
+SOURCE = ft_isalnum.c ft_isprint.c ft_memcmp.c  ft_putchar_fd.c ft_split.c \
+			ft_strlcat.c ft_strncmp.c ft_substr.c ft_atoi.c ft_isalpha.c \
+			ft_itoa.c ft_memcpy.c  ft_putendl_fd.c ft_strchr.c  ft_strlcpy.c \
+			ft_strnstr.c ft_tolower.c ft_bzero.c ft_isascii.c ft_memcpy.c \
+			ft_memmove.c ft_putnbr_fd.c ft_strdup.c ft_strlen.c ft_strrchr.c \
+			ft_toupper.c ft_calloc.c ft_isdigit.c ft_memchr.c ft_memset.c  \
+			ft_putstr_fd.c ft_strjoin.c ft_strmapi.c ft_strtrim.c ft_striteri.c
 
 OBJ = $(SOURCE:.c=.o)
+
+# BONUS = 
+
+# BONUS_OBJS =
 
 LIB = ar rc $(NAME)
 
