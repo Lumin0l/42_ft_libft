@@ -6,7 +6,7 @@
 /*   By: ide-la-i <ide-la-i@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 12:35:42 by ide-la-i          #+#    #+#             */
-/*   Updated: 2023/05/05 15:03:18 by ide-la-i         ###   ########.fr       */
+/*   Updated: 2023/05/09 17:50:14 by ide-la-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,13 @@
 # include <fcntl.h>
 // For Struct
 # include <stdio.h>
+
+// Bonus struct
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -54,5 +61,8 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	**ft_split(char const *s, char c);
+
+// Bonus
+t_list	*ft_lstnew(void *content);
 
 #endif
