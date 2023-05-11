@@ -6,7 +6,7 @@
 #    By: ide-la-i <ide-la-i@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/02 12:56:59 by ide-la-i          #+#    #+#              #
-#    Updated: 2023/05/09 17:53:26 by ide-la-i         ###   ########.fr        #
+#    Updated: 2023/05/11 15:43:51 by ide-la-i         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,13 +39,11 @@ RM = rm -f
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@$(CC) $(CFLAGS) -c $(SOURCE)
-	@$(LIB) $(OBJ)
+	@$(CC) $(CFLAGS) -c $(SOURCE) $(BONUS)
+	@$(LIB) $(OBJ) $(BONUS_OBJS)
 	@$(RANLIB) $(NAME)
 
-bonus: 
-	$(OBJS) $(BONUS_OBJS)
-		@$(LIB) $(OBJS) $(BONUS_OBJS)
+bonus: all
 
 clean:
 	@$(RM) $(OBJ) $(BONUS_OBJS)
