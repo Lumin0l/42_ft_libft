@@ -6,7 +6,7 @@
 #    By: ide-la-i <ide-la-i@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/02 12:56:59 by ide-la-i          #+#    #+#              #
-#    Updated: 2023/05/09 17:09:24 by ide-la-i         ###   ########.fr        #
+#    Updated: 2023/05/09 17:53:26 by ide-la-i         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,9 +26,9 @@ SOURCE = ft_isalnum.c ft_isprint.c ft_memcmp.c  ft_putchar_fd.c ft_split.c \
 
 OBJ = $(SOURCE:.c=.o)
 
-# BONUS = 
+BONUS = ft_lstnew.c
 
-# BONUS_OBJS =
+BONUS_OBJS = $(BONUS:.c=.o)
 
 LIB = ar rc $(NAME)
 
@@ -43,8 +43,12 @@ $(NAME): $(OBJ)
 	@$(LIB) $(OBJ)
 	@$(RANLIB) $(NAME)
 
+bonus: 
+	$(OBJS) $(BONUS_OBJS)
+		@$(LIB) $(OBJS) $(BONUS_OBJS)
+
 clean:
-	@$(RM) $(OBJ)
+	@$(RM) $(OBJ) $(BONUS_OBJS)
 
 fclean: clean
 		@$(RM) $(NAME)
