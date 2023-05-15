@@ -6,7 +6,7 @@
 #    By: ide-la-i <ide-la-i@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/02 12:56:59 by ide-la-i          #+#    #+#              #
-#    Updated: 2023/05/15 16:45:09 by ide-la-i         ###   ########.fr        #
+#    Updated: 2023/05/15 19:26:55 by ide-la-i         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,8 @@ SOURCE = ft_isalnum.c ft_isprint.c ft_memcmp.c  ft_putchar_fd.c ft_split.c \
 
 OBJ = $(SOURCE:.c=.o)
 
-BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c
+BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
+			ft_lstdelone.c ft_lstclear.c ft_lstiter.c
 
 BONUS_OBJS = $(BONUS:.c=.o)
 
