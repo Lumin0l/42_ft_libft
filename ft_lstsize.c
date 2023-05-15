@@ -6,7 +6,7 @@
 /*   By: ide-la-i <ide-la-i@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 17:00:11 by ide-la-i          #+#    #+#             */
-/*   Updated: 2023/05/11 17:08:57 by ide-la-i         ###   ########.fr       */
+/*   Updated: 2023/05/15 16:03:53 by ide-la-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	unsigned int	index;
+	int	index;
 
 	if (!lst)
 		return (0);

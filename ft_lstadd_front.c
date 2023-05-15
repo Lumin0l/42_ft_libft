@@ -6,13 +6,13 @@
 /*   By: ide-la-i <ide-la-i@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 16:16:06 by ide-la-i          #+#    #+#             */
-/*   Updated: 2023/05/11 16:54:32 by ide-la-i         ###   ########.fr       */
+/*   Updated: 2023/05/15 15:56:52 by ide-la-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	new ->next = *lst;
 	*lst = new;
